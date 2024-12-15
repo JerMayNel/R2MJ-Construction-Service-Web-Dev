@@ -3,59 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>r2mj construction services website development</title>
+    <title>R2MJ Construction Services Website Development</title>
     <link rel="stylesheet" href="style.css">
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<link rel="stylesheet"
-href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #FFA500; /* Orange background */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            padding: 5px 10px;
+        }
+
+        .navbar ul a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-image: url('solarpanel.jpg'); /* Path to your uploaded image */
+            background-size: cover;  /* Makes the image cover the entire section */
+            background-position: center;  /* Centers the image */
+            background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+        }
+
+        .service-box {
+            flex: 1 1 calc(25% - 40px); /* Adjust the percentage to make boxes smaller */
+            max-width: calc(25% - 40px); /* Ensures boxes stay consistent in size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            text-align: center;
+            padding: 15px;
+        }
+
+        .service-box img {
+            width: 100%;  /* Ensures the images fill the container width */
+            height: 200px;  /* Set a fixed height for all images */
+            object-fit: cover;  /* Ensures images maintain their aspect ratio while covering the container */
+            border-bottom: 2px solid #ddd;
+        }
+
+        .service-box h2 {
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .service-box p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .service-box {
+                flex: 1 1 calc(50% - 20px); /* Make boxes larger on smaller screens, but still consistent */
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-box {
+                flex: 1 1 100%; /* Full-width on mobile */
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>R2MJ Construction Service</h1>
+        <h1>R2MJ Construction Services</h1>
     </header>
 
-    <NAV class="navbar">
+    <nav class="navbar">
         <ul>
-            <a href="R2mj-Home-page .html">Home</a>
-            <a href="R2mj-Project-page .html">Projects</a>
-            <a href="R2mj-Services-page .html">Services</a>
-            <a href="R2mj-Contact-page .html">Contact</a>
+            <li><a href="R2mj-Home-page.html">Home</a></li>
+            <li><a href="R2mj-Project-page.html">Projects</a></li>
+            <li><a href="R2mj-Services-page.html">Services</a></li>
+            <li><a href="R2mj-Contact-page.html">Contact</a></li>
         </ul>
-
-    </NAV>
+    </nav>
 
     <h1>OUR SERVICES</h1>
     <div class="services-container">
         <!-- Home Renovation Section -->
         <div class="service-box">
-            <img src="image1.jpg" alt="Home Renovation Image">
+            <img src="homerenovation.jpg" alt="Home Renovation Image">
             <h2>Home Renovation</h2>
             <p>R2MJ Construction Services offers comprehensive home renovation services with a focus on quality and customer satisfaction. Our expert team ensures that every project is completed to the highest standards, meeting the unique needs and preferences of our clients.</p>
         </div>
         
         <!-- Solar PV System Installation Section -->
         <div class="service-box">
-            <img src="image2.jpg" alt="Solar PV System Image">
+            <img src="solarpanel.jpg" alt="Solar PV System Image">
             <h2>Solar PV System Installation</h2>
             <p>At R2MJ Construction Services, we specialize in the professional installation of Solar PV systems for residential properties. Our sustainable energy solutions are designed to optimize energy efficiency and reduce long-term costs.</p>
         </div>
         
-        <!-- Budget-Based Approach Section -->
+        <!-- Electrical Installation Section -->
         <div class="service-box">
-            <img src="image3.jpg" alt="Budget Planning Image">
-            <h2>Budget-Based Approach</h2>
+            <img src="electrical.jpg" alt="Budget Planning Image">
+            <h2>Electrical Installation Section</h2>
             <p>We take a budget-based approach to all our projects, ensuring that our services are accessible and tailored to the financial requirements of our clients. Our transparent pricing and cost-effective solutions set us apart in the industry.</p>
         </div>
+
+        <!-- CCTV Installation -->
+        <div class="service-box">
+            <img src="cctvvv.jpg" alt="Commercial Construction Image">
+            <h2>CCTV Installation</h2>
+            <p>Our team provides top-notch commercial construction services, helping businesses build and customize spaces that meet their operational and aesthetic needs. We deliver projects on time and within budget.</p>
+        </div>
     </div>
-
-
 </body>
 </html>

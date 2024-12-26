@@ -32,7 +32,6 @@
    width: 100%;
  }
 
-  /*  contact */
 body {
   font-family: "Open Sans", serif;
 }
@@ -230,19 +229,24 @@ nav.shrink .link a.active {
   margin: 0; /* Remove centering constraints */
   height: 100%; /* Make content fill the container */
   display: flex; /* Flex layout to center content if needed */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
   background-color: var(--extra-light); /* Optional */
   box-shadow: none; /* Remove the shadow for a cleaner look */
+  flex-direction: column; /* or row depending on your layout */
+  justify-content: flex-start;
+  align-items: stretch; /* Ensures children expand properly */
+  height: 100%;
+  background-color: white;
 }
 
- .banner {
+.banner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  width: 100%; /* Full width of the parent */
+  height: 80vh; /* 80% of the viewport height */
 }
 
 .banner__content {
-  padding: 5rem 1rem;
+  padding: 3rem 1rem; /* Reduce padding for smaller banners */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,13 +256,13 @@ nav.shrink .link a.active {
 }
 
 .banner__content .subtitle {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 2px;
 }
 
 .banner__content .title {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   font-family: var(--font-heading);
   color: var(--primary-color-dark);
@@ -266,13 +270,16 @@ nav.shrink .link a.active {
 
 .banner__content .description {
   color: var(--text-light);
-  margin: auto;
+  margin-top: 2rem;
   margin-bottom: 1rem;
-  max-width: 400px;
+  max-width: 550px;
+  font-size: 1.2rem;
 }
 
 .banner__content button {
   padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1em;
   outline: none;
   border: none;
   border-radius: 5rem;
@@ -287,11 +294,138 @@ nav.shrink .link a.active {
 }
 
 .banner__image {
-  background-image: url("electrical.jpg");
+  background-image: url("assets/about-home.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%; /* Matches parent width */
+  height: 100%; /* Matches parent height */
 }
+
+.features {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Montserrat', sans-serif; /* Change to your preferred font */
+  background-color: var(--extra-light);
+}
+
+.features h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.features p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.features__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.features__card {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.features__card span i {
+  font-size: 2.6rem;
+  color: var(--text-dark);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gear-container {
+  position: relative;
+  display: inline-block; /* Ensures the image and icon are inline */
+}
+
+.orange-gear {
+  width: 60%; /* Adjust width as needed */
+  height: auto;
+}
+
+.features__card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--primary-color-dark);
+}
+
+.features__card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.services {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Montserrat', sans-serif; /* Change to your preferred font */
+}
+
+.services h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.services__card {
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;  /* Align items to the left */
+  justify-content: flex-start;  /* Align content to the top */
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;  /* Align text to the left */
+}
+
+.services__card img {
+  width: 100%;  /* Ensures the images fill the container width */
+  height: 200px;  /* Set a fixed height for all images */
+  object-fit: cover;  /* Ensures images maintain their aspect ratio while covering the container */
+  border-bottom: 2px solid #ddd;
+}
+
+.services__card h4 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--primary-color-dark);
+}
+
+.services__card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+
+
 
 /*Contacts*/
 .contact-section {

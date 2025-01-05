@@ -201,6 +201,28 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
                 </div>
               </section>
         </div>
+        <button class="chat-btn" onclick="toggleChatbox()">
+          <img src="assets/chat-icon.png" alt="Chat" class="chat-btn">
+        </button>
+    
+        <div class="chat-box" id="chatbox" style="display: none;">
+            <div class="chat-header">
+                Chat Support
+                <div class="header-buttons">
+                    <button class="minimize-btn" onclick="minimizeChatbox()">−</button>
+                    <button class="exit-btn" onclick="toggleChatbox()">×</button>
+                </div>
+            </div>
+            <div class="chats" id="chats">
+                <div class="admin-chat">Hello! How can I assist you today?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="message-input" onkeypress="checkEnter(event)" placeholder="Type a message...">
+                <button class="send-btn" onclick="sendMessage()">
+                    <img src="assets/send.png" alt="Send" class="send-icon">
+                </button>
+            </div>
+        </div>
     </main>
     <footer>
       <div class="section__container footer__container">

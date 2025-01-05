@@ -849,3 +849,188 @@ iframe {
   line-height: 1.6;
   color: #666;
 }
+
+/* CHATBOX */
+.chat-box {
+  width: 300px; /* Adjust width */
+  max-height: 360px; /* Maximum height */
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  position: fixed; /* Fixed position */
+  right: 20px; /* Distance from the right */
+  bottom: 80px; /* Distance from the bottom */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  overflow: hidden; /* Prevent overflow */
+  animation: slideIn 0.3s ease; /* Slide-in animation */
+  transition: background-color 0.3s;
+}
+
+.chat-header {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between title and buttons */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Padding for aesthetics */
+  background-color: #ff9800; /* Orange header */
+  color: white; /* Text color */
+  border-top-left-radius: 10px; /* Rounded corners */
+  border-top-right-radius: 10px; /* Rounded corners */
+}
+
+.header-buttons {
+  display: flex; /* Align buttons in a row */
+  align-items: center; /* Center buttons vertically */
+}
+
+.exit-btn,
+.minimize-btn {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 18px; /* Font size */
+  margin-left: 10px; /* Space between buttons */
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.exit-btn:hover,
+.minimize-btn:hover {
+  color: #e67e22; /* Change color on hover */
+}
+
+.chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff9800; /* Orange background */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.chat-btn img {
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.chat-btn:hover img {
+  transform: scale(1.1); /* Enlarge image on hover */
+}
+
+
+.chat-box {
+  width: 280px; /* Adjust width */
+  max-height: 360px; /* Maximum height */
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  position: fixed;
+  bottom: 80px; /* Space from the bottom */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideIn 0.3s ease; /* Slide-in animation */
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+.chat-header {
+  background-color: #ff9800; /* Orange header */
+  color: white;
+  padding: 10px;
+  text-align: justify;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.exit-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: right;
+}
+
+.chats {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto; /* Allow scrolling */
+  padding: 5px;
+}
+
+.client-chat,
+.admin-chat {
+  padding: 10px 15px; /* Padding for better appearance */
+  border-radius: 20px; /* Rounded corners */
+  margin: 5px; /* Margin for spacing */
+  max-width: 70%; /* Limit width */
+  word-wrap: break-word; /* Prevent overflow */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+.client-chat {
+  background-color: #ff9800; /* Orange for client messages */
+  color: white;
+  align-self: flex-end; /* Align client messages to the right */
+}
+
+.admin-chat {
+  background-color: #ffe0b2; /* Light background for admin messages */
+  color: #333;
+  align-self: flex-start; /* Align admin messages to the left */
+}
+
+.chat-input {
+  display: flex;
+  padding: 5px;
+  background-color: #f1f1f1; /* Light background for input area */
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 15px;
+}
+
+.send-btn {
+  background-color: #ff9800; /* Orange for send button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-btn {
+  background-color: transparent; /* Make background transparent */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 0; /* Remove padding */
+}
+
+.send-icon {
+  width: 24px; /* Adjust icon size */
+  height: 24px; /* Adjust icon size */
+}
+
+.send-btn:hover {
+  background-color: #e67e22; /* Darker orange on hover */
+}

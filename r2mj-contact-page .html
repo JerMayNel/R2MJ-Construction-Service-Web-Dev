@@ -13,7 +13,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -40,54 +40,45 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     </nav>
     </header>
     <div class="container">
-      <!-- Contact Form -->
-      <section class="contact-form">
-          <h2>Contact Us</h2>
-          <form>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <section class="contact-section" id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><strong>Address:</strong><br> Zone 5, Cabalitian, Asingan, Philippines, 2439</p>
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <p><strong>Phone:</strong><br> 0942 303 9244</p>
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <p><strong>Email:</strong><br> r2mj.construct@gmail.com</p>
+                </div>
+            </div>
 
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <form class="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-              <label for="mobile">Mobile:</label>
-              <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-              <label for="message">Your Message:</label>
-              <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
 
-              <button type="submit">Send Message</button>
-          </form>
-      </section>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
 
-      <!-- Map and Company Info -->
-      <section class="map-and-info">
-        <h2>Our Location</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7241.724746178111!2d120.65361521266725!3d15.976934957076319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sZone%205%2C%20Cabalitian%2C%20Asingan%2C%20Philippines!5e0!3m2!1sen!2sph!4v1734235966666!5m2!1sen!2sph"
-          style="border: 0; width: 100%; height: 300px; border-radius: 5px;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-
-        <div class="company-info">
-          <p><strong>R2MJ Construction Services Corp.</strong></p>
-          <p>
-              <i class="fa-solid fa-location-dot" style="color: #F39C12; margin-right: 8px;"></i>
-              Zone 5, Cabalitian, Asingan, 2439
-            </p>
-            <p>
-              <i class="fa-solid fa-phone" style="color: #F39C12; margin-right: 8px;"></i>
-              0942 303 9244
-            </p>
-            <p>
-              <i class="fa-solid fa-envelope" style="color: #F39C12; margin-right: 8px;"></i>
-              r2mj.construct@gmail.com
-          </p>
-          </div>
-      </section>
-  </div>
+        <div class="map-container">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7241.724746178111!2d120.65361521266725!3d15.976934957076319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sZone%205%2C%20Cabalitian%2C%20Asingan%2C%20Philippines!5e0!3m2!1sen!2sph!4v1734235966666!5m2!1sen!2sph"
+            allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
 
     <footer>
         <div class="section__container footer__container">
@@ -125,7 +116,6 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
           </div>
         </div>
       </footer>
-
     <script src="nav.js"></script>
 </body>
 </html>

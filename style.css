@@ -3,7 +3,7 @@
 
 :root {
    --primary-color: #FFA500;
-   --primary-color-dark: #C65102;
+   --primary-color-dark: #c65102;
    --text-dark: #1f1f1f;
    --text-light: #4b5563;
    --extra-light: #f3f4f6;
@@ -12,6 +12,10 @@
    --max-width: 1200px;
    --font-heading: "Montserrat", sans-serif;
  }
+
+html {
+  scroll-behavior: smooth;
+}
 
  * {
    padding: 0;
@@ -22,6 +26,7 @@
  .section__container {
    max-width: var(--max-width);
    margin: auto;
+   position: relative; /* Keeps child elements positioned relative to this container */
  }
 
  a {
@@ -36,12 +41,14 @@ body {
   font-family: "Open Sans", serif;
 }
 
-header {
+#home-page header {
    position: relative;
    background-image: url("assets/header.jpg");
    background-position: center center;
    background-size: cover;
    background-repeat: no-repeat;
+   width: 100%; /* Full width */
+   height: 100vh; /* Full height */
  }
 
  nav {
@@ -79,19 +86,24 @@ nav.shrink .link a.active {
 
 
 .header__container {
-     position: relative; /* Ensure these elements stay above the overlay */
-     z-index: 2;
- }
+  position: relative;
+  z-index: 2;
+  display: flex; /* Center content */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100%; /* Match header height */
+  text-align: center;
+}
 
- .header-overlay {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text contrast */
-   z-index: 1;
- }
+#home-page .header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+  z-index: 1;
+}
 
  .nav__links {
    list-style: none;
@@ -155,6 +167,7 @@ nav.shrink .link a.active {
 }
 
 .header__content {
+   margin-top: 100px;
    text-align: center;
    color: var(--white);
    display: flex;
@@ -163,6 +176,9 @@ nav.shrink .link a.active {
    align-items: center; /* Center content horizontally inside the div */
    gap: 1rem;
    z-index: 2;
+   opacity: 0;
+   transform: translateY(50px);
+   animation: fadeUp 1.5s ease-out forwards;
 }
 
  .header__content h1 {
@@ -171,6 +187,7 @@ nav.shrink .link a.active {
    font-family: 'Montserrat', sans-serif;
    color: white;
    z-index: 2;
+   margin-top: 4rem;
  }
  
  .header__content p {
@@ -730,6 +747,67 @@ footer {
   font-size: 1.2rem;
 }
 
+/* Initial state for the header content */
+
+/* Keyframes for fade-in and hover-up effect */
+@keyframes fadeUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.scroll-down {
+  height: 80px; /* Size remains large */
+  width: 80px;
+  margin: 20px auto 0; /* Centers the element horizontally */
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative; /* Allows it to remain in the flow of the document */
+}
+
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 16px;
+  width: 16px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 3px solid #c65102;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.3s;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+
+
+
 
 /*Contacts*/
 .contact-section {
@@ -865,6 +943,7 @@ iframe {
   overflow: hidden; /* Prevent overflow */
   animation: slideIn 0.3s ease; /* Slide-in animation */
   transition: background-color 0.3s;
+  z-index: 10;
 }
 
 .chat-header {
@@ -913,6 +992,7 @@ iframe {
   font-size: 24px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
+  z-index: 9;
 }
 
 .chat-btn img {

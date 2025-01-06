@@ -22,7 +22,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
 
 </head>
-<body>
+<body id="home-page">
     <header>
         <div class="header-overlay"></div>
         <nav>
@@ -45,13 +45,14 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
                 <h1>CONSTRUCTION SERVICES<br/><span style="color: orange;">CREATIVE AND PROFESSIONAL</span></h1>
                 <p>We Build with Quality, Honesty and Excellence.</p>
                 <div class="buttons">
-                    <button>Know More</button>
-                    <button>Inquire Now</button>
+                  <button id="know-more-btn">Know More</button>
+                  <button onclick="toggleChatbox()">Inquire Now</button>
             </div>
+            <div class="scroll-down" id="scroll-down"></div>
         </div>
     </header>
 
-    <main class="main__container">
+    <main class="main__container" id="main-container">
         <div class="main__content">
             <section class="banner">
                 <div class="banner__content">
@@ -63,13 +64,13 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
                         You want superior quality, you have a time frame and a budget to complete the project within.
                         You found the team you are looking for.
                       </p>
-                      <button>CHAT WITH US</button>
+                      <button onclick="toggleChatbox()">CHAT WITH US</button> 
                 </div>
                     <div class="banner__image"></div>
             </section>
             <section class="features">
               <h1>WHY CHOOSE US?</h1>
-              <p>Recognized as one of the most trusted and client-focused construction companies in the Philippines, RMJE Construction Services Corporation
+              <p>Recognized as one of the most trusted and client-focused construction companies in the Philippines, R2MJ Construction Services Corporation
                 is a team of passionate and experienced professionals, ready to serve you from start to end of your project. We are masters at managing,
                 coordinating and building so you can rely on us for any of your construction needs.</p>
               <div class="features__container">
@@ -188,7 +189,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
                     </div>
                   </div>
 
-                  <button>CLICK HERE FOR MORE PROJECTS</button>
+                  <button onclick="location.href='r2mj-project-page .html'">CLICK HERE FOR MORE PROJECTS</button>
                 </div>
               </section>              
 
@@ -197,7 +198,7 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
                 <h1>Set your project up for success by hiring R2MJ Construction Services
                   Corporation as your design and solar construction project managers.</h1>
                   <h2>Ready to build your project? Let’s talk about your plans.</h2>
-                  <button>REACH US NOW</button>
+                  <button onclick="toggleChatbox()">REACH US NOW</button>
                 </div>
               </section>
         </div>

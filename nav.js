@@ -78,3 +78,16 @@ function minimizeChatbox() {
   const chatbox = document.getElementById('chatbox');
   chatbox.style.display = 'none'; // Hide the chatbox
 }
+
+// Button
+
+    document.getElementById("know-more-btn").addEventListener("click", function() {
+        const targetSection = document.getElementById("main-container");
+        targetSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("scroll-down").addEventListener("click", function() {
+      const targetSection = document.getElementById("main-container");
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    });
+    

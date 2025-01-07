@@ -1141,20 +1141,6 @@ html {
   margin: 8px;
 }
 
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #d2800d;
-  color: white;
-}
-
-.about-section h1 {
-  font-size: 25px; /* Adjust the font size as needed */
-  font-weight: bold; /* Makes the title bold */
-  color: white; /* Ensures the text is white */
-  margin-bottom: 30px; /* Adds space below the title */
-  
-}
 
 .container {
   padding: 0 16px;
@@ -1170,21 +1156,6 @@ html {
   color: var(--orange);
 }
 
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
 
 @media screen and (max-width: 600px) {
   .column {
@@ -1192,3 +1163,49 @@ html {
     display: block;
   }
 }
+
+.all-header-background {
+  height: 60vh;
+  display: flex;
+  justify-content: flex-start; /* Start content from the top */
+  align-items: center; /* Center content vertically in the light portion */
+  padding: 20px; /* Add padding for spacing from edges */
+  position: relative;
+
+  /* Layer 1: Gradient */
+  background: linear-gradient(
+      to right,
+      var(--text-light) 0%,
+      var(--text-light) 50%, /* Text stays within this 50% */
+      rgba(255, 165, 0, 0) 120% /* Transparent fade into the image */
+    ),
+    /* Layer 2: Image */
+    url("assets/header-background.jpg");
+
+  background-size: cover; /* Make the image fill the container */
+  background-position: center; /* Center the image */
+}
+
+.all-header-background .text-container {
+  max-width: 50%; /* Constrain content to the light portion */
+  color: rgb(255, 255, 255); /* Text color matches the light background */
+  text-align: left; /* Align text to the left */
+}
+
+.all-header-background h1 {
+  font-size: 2.5rem; /* Adjust font size */
+  margin: 120px 0 0 20px; /* Add spacing below the heading */
+  color: rgb(255, 255, 255); /* Text color matches the light background */
+  font-family: "Montserrat", sans-serif;
+}
+
+.all-header-background p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 20px 25px 20px 23px; /* Add spacing below the heading */
+  color: rgb(255, 255, 255); /* Text color matches the light background */
+  font-family: "Open Sans", serif;
+  text-justify: auto;
+}
+

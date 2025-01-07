@@ -113,6 +113,15 @@
         </nav>
     </header>
 
+    <div class="all-header-background">
+        <div class="text-container">
+          <h1>R2MJ CONSTRUCTION SERVICES</h1>
+          <p>
+            We offer construction services in the Philippines such as: consultancy, project planning, designing, project management and execution of the work. We can take care of your work from the beginning to handing over the keys to your new house or construction project.
+          </p>
+        </div>
+      </div>       
+      
     <h1>OUR SERVICES</h1>
     <div class="services-container">
         <!-- Home Renovation Section -->
@@ -142,6 +151,42 @@
             <h2>CCTV Installation</h2>
             <p>Our team provides top-notch commercial construction services, helping businesses build and customize spaces that meet their operational and aesthetic needs. We deliver projects on time and within budget.</p>
         </div>
+      </div>
+
+        <!-- PUT YOUR CONTENTS HERE-->
+
+        <section class="advertise">
+            <div class="advertise-container">
+            <h1>Set your project up for success by hiring R2MJ Construction Services
+              Corporation as your design and solar construction project managers.</h1>
+              <h2>Ready to build your project? Let’s talk about your plans.</h2>
+              <button onclick="toggleChatbox()">REACH US NOW</button>
+            </div>
+        </section>
+         
+        <!--CHATBOX--> 
+
+      <button class="chat-btn" onclick="toggleChatbox()">
+        <img src="assets/chat-icon.png" alt="Chat" class="chat-btn">
+      </button>
+  
+      <div class="chat-box" id="chatbox" style="display: none;">
+          <div class="chat-header">
+              Chat Support
+              <div class="header-buttons">
+                  <button class="minimize-btn" onclick="minimizeChatbox()">−</button>
+                  <button class="exit-btn" onclick="toggleChatbox()">×</button>
+              </div>
+          </div>
+          <div class="chats" id="chats">
+              <div class="admin-chat">Hello! How can I assist you today?</div>
+          </div>
+          <div class="chat-input">
+              <input type="text" id="message-input" onkeypress="checkEnter(event)" placeholder="Type a message...">
+              <button class="send-btn" onclick="sendMessage()">
+                  <img src="assets/send.png" alt="Send" class="send-icon">
+              </button>
+      </div>
     </div>
 
     <footer>

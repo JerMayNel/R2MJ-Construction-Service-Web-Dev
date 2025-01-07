@@ -1121,10 +1121,12 @@ iframe {
   margin: 0;
 }
 
+/* Ensures consistent box-sizing behavior across all elements */
 html {
   box-sizing: border-box;
 }
 
+/* Apply box-sizing to all elements and pseudo-elements */
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -1136,9 +1138,10 @@ html {
   padding: 0 8px;
 }
 
+/* Styling for card elements with a shadow effect */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Soft shadow around cards */
+  margin: 8px; /* Margin between cards */
 }
 
 .about-section {
@@ -1157,7 +1160,7 @@ html {
 }
 
 .container {
-  padding: 0 16px;
+  padding: 0 16px; /* Horizontal padding inside the container */
 }
 
 .container::after, .row::after {
@@ -1189,6 +1192,6 @@ html {
 @media screen and (max-width: 600px) {
   .column {
     width: 95%;
-    display: block;
+    display: block; /* Stack columns vertically */
   }
 }

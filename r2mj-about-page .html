@@ -30,12 +30,11 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
                     <img src="assets/logo-name.png" alt="Logo Name" class="logo-name" />
                 </li>
                 <div class="nav-items">
-                    <li class="link"><a href="r2mj-home-page .html">Home</a></li>
-                    <li class="link"><a href="r2mj-about-page .html">About</a></li>
-                    <li class="link"><a href="r2mj-services-page .html">Services</a></li>
-                    <li class="link"><a href="r2mj-project-page .html">Projects</a></li>
-                    <li class="link"><a href="r2mj-contact-page .html">Contact</a></li>
-                </div>                
+                  <li class="link"><a href="r2mj-home-page .html">Home</a></li>
+                  <li class="link"><a href="r2mj-about-page .html">About</a></li>
+                  <li class="link"><a href="r2mj-services-page .html">Services</a></li>
+                  <li class="link"><a href="r2mj-contact-page .html">Contact</a></li>
+              </div>                 
             </ul>
         </nav>
     </header>
@@ -47,109 +46,57 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
           <div class="text-container">
             <h1>About Us</h1>
             <p>
-              RMJE Construction Services Corporation is a leading construction company
+              RMJE Construction Services Corporation is an incredible construction company
               in the Philippines, specializing in a wide range of residential,
               commercial, and industrial projects. We are committed to providing
               high-quality service with integrity, professionalism, and efficiency.
             </p>
           </div>
         </div>        
-        
-        <h2 style="text-align:center">Our Team</h2>
-        <div class="row">
-          <div class="column">
-            <div class="card">
-              <img src="assets/about-us.png" alt="Jane" style="width:60%">
-              <div class="container">
-                <h2>Jane Doe</h2>
-                <p class="title">CEO & Founder</p>
-                <p>jane@example.com</p>
-              </div>
-            </div>
+
+        <section class="about-us">
+          <div class="about-us__content">
+                <h4 class="title">Randy Roger A. Gandol</h4>
+                <p class="subtitle">Chief Operations Officer</p>
+                <p class="description">
+                  With over 13 years of experience in electrical engineering, he specializes in electrical installation, system design, and project execution across a variety of sectors, including commercial, industrial, and residential projects. He has also conducted thorough site inspections, overseen on-site installations, and played key roles in coordinating project activities.
+                </p>
+                <p class="description">
+                  Throughout his career, he has worked on numerous engineering projects, demonstrating strong leadership and problem-solving abilities. His skill in coordinating multidisciplinary teams has ensured the successful and seamless execution of projects, consistently delivering high-quality results that meet client expectations and technical specifications.
+                </p>
+                <p class="description">
+                  He earned his Bachelor of Science in Electrical Engineering from Pangasinan State University (Urdaneta City Campus) in 2011. In addition, he holds certifications in electrical system design and energy-efficient solutions, which further enhance his capacity to deliver sustainable, innovative outcomes in his projects.
+                </p>
           </div>
-        
-          <div class="column">
-            <div class="card">
-              <img src="assets/about-us.png" alt="Mike" style="width:60%">
-              <div class="container">
-                <h2>Mike Ross</h2>
-                <p class="title">Art Director</p>
-                <p>mike@example.com</p>
-              </div>
-            </div>
-          </div>
-        
-          <div class="column">
-            <div class="card">
-              <img src="assets/about-us.png" alt="John" style="width:60%">
-              <div class="container">
-                <h2>John Doe</h2>
-                <p class="title">Designer</p>
-                <p>john@example.com</p>
-              </div>
-            </div>
-          </div>
-      </div>
+              <div class="about-us__image"></div>
+      </section>
 
       <section class="advertise">
         <div class="advertise-container">
         <h1>Set your project up for success by hiring R2MJ Construction Services
           Corporation as your design and solar construction project managers.</h1>
           <h2>Ready to build your project? Let’s talk about your plans.</h2>
-          <button onclick="toggleChatbox()">REACH US NOW</button>
+          <a href="r2mj-contact-page .html" class="button">REACH US NOW</a>
         </div>
-
-        
-                  <!--CHATBOX--> 
       </section>
-      <button class="chat-btn" onclick="toggleChatbox()">
-        <img src="assets/chat-icon.png" alt="Chat" class="chat-btn">
-      </button>
-  
-      <div class="chat-box" id="chatbox" style="display: none;">
-          <div class="chat-header">
-              Chat Support
-              <div class="header-buttons">
-                  <button class="minimize-btn" onclick="minimizeChatbox()">−</button>
-                  <button class="exit-btn" onclick="toggleChatbox()">×</button>
-              </div>
-          </div>
-          <div class="chats" id="chats">
-              <div class="admin-chat">Hello! How can I assist you today?</div>
-          </div>
-          <div class="chat-input">
-              <input type="text" id="message-input" onkeypress="checkEnter(event)" placeholder="Type a message...">
-              <button class="send-btn" onclick="sendMessage()">
-                  <img src="assets/send.png" alt="Send" class="send-icon">
-              </button>
-        </div>
-     </div>
       </main>  
      
-    <footer>
+      <footer>
         <div class="section__container footer__container">
           <div class="footer__col">
             <h4>About Us</h4>
             <img src="assets//white-logo.png" class="logo-image"/>
             <img src="assets/white-logo-name.png" class="logo-name" />
-            <p>R2MJ Construction Services Corporation is committed to meet our customer’s expectations with our services. Read more</p>
+            <p>R2MJ Construction Services Corporation is committed to meet our customer’s expectations with our services.</p>
+          </div>
+          <div class="footer__col"> 
           </div>
           <div class="footer__col">
             <h4>Navigate</h4>
-            <p>Home</p>
-            <p>About Us</p>
-            <p>Services</p>
-            <p>Projects</p>
-            <p>Contact</p>
-          </div>
-          <div class="footer__col">
-            <h4>LICENSE AND PERMITS</h4>
-            <div class="footer__socials">
-              <span><i class="ri-facebook-fill"></i></span>
-              <span><i class="ri-twitter-fill"></i></span>
-              <span><i class="ri-google-fill"></i></span>
-              <span><i class="ri-instagram-line"></i></span>
-            </div>
+            <a href="r2mj-home-page .html" class="footer__link">Home</a>
+            <a href="r2mj-about-page .html" class="footer__link">About Us</a>
+            <a href="r2mj-services-page .html" class="footer__link">Services</a>
+            <a href="r2mj-contact-page .html" class="footer__link">Contact</a>         
           </div>
         </div>
         <div class="section__container footer__bar">

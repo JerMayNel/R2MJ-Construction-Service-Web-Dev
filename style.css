@@ -785,6 +785,18 @@ footer {
   font-size: 0.8rem;
 }
 
+.copyright_link {
+  color: var(--white);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  text-decoration: none; /* Removes the underline */
+  transition: 0.3s;
+}
+
+.copyright_link:hover {
+  color: var(--primary-color); /* Replace with your desired hover color */
+}
+
 .contact-cards {
   display: flex;
   align-items: center;

@@ -1,4 +1,11 @@
 // scroll-nav.js
+document.addEventListener("DOMContentLoaded", function() {
+    // This looks for the hidden input and fills it with the key from config.js
+    const keyInput = document.getElementById('access_key');
+    if (keyInput && typeof CONFIG !== 'undefined') {
+        keyInput.value = CONFIG.WEB3_ACCESS_KEY;
+    }
+});
 
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('nav');
@@ -34,50 +41,6 @@ window.onscroll = function() {
     logoName.src = 'assets/logo-name.png';  // Reset logo name back to the original
   }
 };
-
-/* CHATBOX */
-function sendMessage() {
-  const input = document.getElementById('message-input');
-  const message = input.value.trim();
-
-  if (message) {
-      const messagesContainer = document.getElementById('chats');
-
-      // Create and append client message
-      const clientMessageElement = document.createElement('div');
-      clientMessageElement.textContent = message;
-      clientMessageElement.classList.add('client-chat');
-      messagesContainer.appendChild(clientMessageElement);
-
-      input.value = ''; // Clear the input after sending
-      messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to the bottom
-
-      // Simulate admin response
-      setTimeout(() => {
-          const adminMessageElement = document.createElement('div');
-          adminMessageElement.textContent = "Thank you for your message!";
-          adminMessageElement.classList.add('admin-chat');
-          messagesContainer.appendChild(adminMessageElement);
-          messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to the bottom
-      }, 1000); // Adjust delay as needed
-  }
-}
-
-function checkEnter(event) {
-  if (event.key === 'Enter') {
-      sendMessage();
-  }
-}
-
-function toggleChatbox() {
-  const chatbox = document.getElementById('chatbox');
-  chatbox.style.display = chatbox.style.display === 'none' ? 'flex' : 'none'; // Toggle visibility
-}
-
-function minimizeChatbox() {
-  const chatbox = document.getElementById('chatbox');
-  chatbox.style.display = 'none'; // Hide the chatbox
-}
 
 // Button
 

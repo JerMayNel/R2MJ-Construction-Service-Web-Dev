@@ -28,20 +28,34 @@ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     <header>
-    <nav>
-        <ul class="nav__links">
-            <li class="link logo">
-                <img src="assets//logo.png" alt="Logo" class="logo-image" id="logo"/>
-                <img src="assets/logo-name.png" alt="Logo Name" class="logo-name" />
-            </li>
-            <div class="nav-items">
-              <li class="link"><a href="index.html">Home</a></li>
-              <li class="link"><a href="r2mj-about-page.html">About</a></li>
-              <li class="link"><a href="r2mj-services-page.html">Services</a></li>
-              <li class="link"><a href="r2mj-contact-page.html">Contact</a></li>
-          </div>                   
-        </ul>
-    </nav>
+      <nav>
+          <ul class="nav__links">
+              <li class="link logo">
+                  <img src="assets/logo.png" alt="Logo" class="logo-image" id="logo"/>
+                  <img src="assets/logo-name.png" alt="Logo Name" class="logo-name" />
+              </li>
+
+              <div class="nav-items">
+                  <li class="link"><a href="index.html">Home</a></li>
+                  <li class="link"><a href="r2mj-about-page.html">About</a></li>
+                  <li class="link"><a href="r2mj-services-page.html">Services</a></li>
+                  <li class="link"><a href="r2mj-contact-page.html">Contact</a></li>
+              </div>
+
+              <!-- Mobile hamburger -->
+              <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false">
+                  <i class="ri-menu-line"></i>
+              </button>
+          </ul>
+
+          <!-- Mobile navigation menu -->
+          <div class="mobile-nav" id="mobile-nav">
+              <a href="index.html">Home</a>
+              <a href="r2mj-about-page.html">About</a>
+              <a href="r2mj-services-page.html">Services</a>
+              <a href="r2mj-contact-page.html">Contact</a>
+          </div>
+      </nav>
     </header>
     <div class="all-header-background">
       <div class="text-container">

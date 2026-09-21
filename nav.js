@@ -1,51 +1,142 @@
-// scroll-nav.js
-document.addEventListener("DOMContentLoaded", function() {
-    // This looks for the hidden input and fills it with the key from config.js
-    const keyInput = document.getElementById('access_key');
-    if (keyInput && typeof CONFIG !== 'undefined') {
-        keyInput.value = CONFIG.WEB3_ACCESS_KEY;
-    }
-});
+document.addEventListener("DOMContentLoaded", function () {
 
-window.addEventListener('scroll', function () {
-    const nav = document.querySelector('nav');
+  const nav = document.querySelector("nav");
+  const menuButton = document.getElementById("mobile-menu-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  /*
+   * ==========================================
+   * NAVBAR SCROLL / SHRINK
+   * ==========================================
+   */
+
+  function handleNavbarScroll() {
+    if (!nav) return;
+
+    const logoImage = document.getElementById("logo");
+    const logoName = document.querySelector(".logo-name");
+
     if (window.scrollY > 50) {
-      nav.classList.add('shrink');
+      nav.classList.add("shrink");
+
+      if (logoImage) {
+        logoImage.src = "assets/white-logo.png";
+      }
+
+      if (logoName) {
+        logoName.src = "assets/white-logo-name.png";
+      }
+
     } else {
-      nav.classList.remove('shrink');
+      nav.classList.remove("shrink");
+
+      if (logoImage) {
+        logoImage.src = "assets/logo.png";
+      }
+
+      if (logoName) {
+        logoName.src = "assets/logo-name.png";
+      }
+    }
+  }
+
+  window.addEventListener("scroll", handleNavbarScroll);
+
+  // Run once when page loads
+  handleNavbarScroll();
+
+
+  /*
+   * ==========================================
+   * DESKTOP ACTIVE NAVIGATION LINK
+   * ==========================================
+   */
+
+  const navLinks = document.querySelectorAll(".nav-items a");
+
+  navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add("active");
     }
   });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".nav-items a");
-    navLinks.forEach(link => {
-        if (link.href === window.location.href) {
-            link.classList.add("active");
-        }
-    });
-});
 
-// JavaScript to change logo and logo name when navbar shrinks
-window.onscroll = function() {
-  const nav = document.querySelector('nav');
-  const logoImage = document.getElementById('logo');
-  const logoName = document.querySelector('.logo-name');
-  
-  if (window.scrollY > 50) {  // Adjust the scroll threshold as needed
-    nav.classList.add('shrink');
-    logoImage.src = 'assets/white-logo.png';  // Change logo to white logo when shrunk
-    logoName.src = 'assets/white-logo-name.png';  // Change logo name to white version when shrunk
-  } else {
-    nav.classList.remove('shrink');
-    logoImage.src = 'assets/logo.png';  // Reset logo back to the original
-    logoName.src = 'assets/logo-name.png';  // Reset logo name back to the original
+  /*
+   * ==========================================
+   * MOBILE NAVIGATION
+   * ==========================================
+   */
+
+  if (menuButton && mobileNav) {
+
+    menuButton.addEventListener("click", function () {
+
+      const isOpen = mobileNav.classList.toggle("active");
+
+      menuButton.setAttribute("aria-expanded", isOpen);
+
+      const icon = menuButton.querySelector("i");
+
+      if (isOpen) {
+        icon.classList.remove("ri-menu-line");
+        icon.classList.add("ri-close-line");
+      } else {
+        icon.classList.remove("ri-close-line");
+        icon.classList.add("ri-menu-line");
+      }
+
+    });
+
+
+    /*
+     * Close mobile menu when a link is clicked
+     */
+
+    const mobileLinks = mobileNav.querySelectorAll("a");
+
+    mobileLinks.forEach(link => {
+
+      link.addEventListener("click", function () {
+
+        mobileNav.classList.remove("active");
+
+        menuButton.setAttribute("aria-expanded", "false");
+
+        const icon = menuButton.querySelector("i");
+
+        icon.classList.remove("ri-close-line");
+        icon.classList.add("ri-menu-line");
+
+      });
+
+    });
+
   }
-};
 
-// Button
 
-    document.getElementById("scroll-down").addEventListener("click", function() {
+  /*
+   * ==========================================
+   * SCROLL-DOWN BUTTON
+   * Only exists on the HOME PAGE
+   * ==========================================
+   */
+
+  const scrollDown = document.getElementById("scroll-down");
+
+  if (scrollDown) {
+
+    scrollDown.addEventListener("click", function () {
+
       const targetSection = document.getElementById("main-container");
-      targetSection.scrollIntoView({ behavior: "smooth" });
+
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+
     });
-    
+
+  }
+
+});

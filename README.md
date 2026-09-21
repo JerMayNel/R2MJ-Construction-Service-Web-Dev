@@ -106,15 +106,13 @@ The website was developed with the following goals in mind:
 R2MJ-Construction-Service-Web-Dev/
 │
 ├── 📁 assets/
-│   ├── 📁 images/
-│   └── 📁 icons/
 │
 ├── 📄 index.html
-├── 📄 about.html
-├── 📄 services.html
-├── 📄 contact.html
+├── 📄 r2mj-about-page.html
+├── 📄 r2mj-services-page.html
+├── 📄 r2mj-contact-page.html
 ├── 📄 style.css
-├── 📄 script.js
+├── 📄 nav.js
 └── 📄 README.md
 ```
 
